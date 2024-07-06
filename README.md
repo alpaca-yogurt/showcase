@@ -10,6 +10,7 @@ OCI containers, container orchestration, CI, CD
 ## Previous
 - Dockerfiles
 - CI with Github actions
+- Artifact registry
 
 <br>
 

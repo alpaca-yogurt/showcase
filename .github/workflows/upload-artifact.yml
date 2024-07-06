@@ -1,0 +1,31 @@
+name: Upload artifact example
+
+on:
+  push:
+    paths:
+      "artifact-demo/**"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    
+    - run: |
+          echo "\nHAHAHA\n" >> artifact-demo/artifact.txt
+
+    - name: Cache "build" artifact
+      id: build-artifact
+      uses: actions/cache/save@v4
+      with:
+        path: artifact-demo/artifact.txt
+        key: build-artifact-key
+
+
+
+
+
+

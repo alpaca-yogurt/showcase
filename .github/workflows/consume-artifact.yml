@@ -1,0 +1,31 @@
+name: Consume artifact example
+
+on: 
+  workflow_dispatch:
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout 
+      uses: actions/checkout@v3
+
+    
+    - name: Restore build artifact
+      id: restore-build-artifact
+      uses: actions/cache/restore@v4
+      with:
+        path: |
+          artifact-demo/artifact.txt
+        key: build-artifact-key
+
+
+    - name: Show contents of artifact
+      run: ls -R
+    #   run: cat artifact.txt
+
+
+
+

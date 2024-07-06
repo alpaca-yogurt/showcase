@@ -1,0 +1,22 @@
+name: Artifact cache example
+
+on:
+  push:
+    paths:
+      "artifact-demo/**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - uses: actions/upload-artifact@v4
+      with:
+        name: special-artifact
+        path: artifact-demo/artifact.txt
+
+
+
+

@@ -15,7 +15,7 @@ jobs:
 
     
     - run: |
-          echo "\nHAHAHA\n" >> artifact-demo/artifact.txt
+          echo "Never gonna tell a lie and hurt you" >> artifact-demo/artifact.txt
 
     - name: Cache "build" artifact
       id: build-artifact

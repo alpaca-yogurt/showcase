@@ -22,9 +22,11 @@ jobs:
         key: build-artifact-key
 
 
-    - name: Show contents of artifact
+    - name: List files
       run: ls -R
-    #   run: cat artifact.txt
+
+    - name: Reveal contents of the artifact
+      run: cat artifact-demo/artifact.txt
 
 
 
